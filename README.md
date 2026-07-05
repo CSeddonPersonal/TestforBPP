@@ -31,7 +31,7 @@ A successful model could be used to:
 
 Source:
 
-https://www.kaggle.com/datasets/blastchar/telco-customer-churn/data
+[Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn/data)
 
 Original dataset supplied by:
 
