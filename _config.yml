@@ -1,4 +1,9 @@
 title: Chris Seddon
-logo: /assets/image.png
-#description: text below image
+logo: /assets/profile.png
+description: Data Science Portfolio | Apprenticeship Projects | Machine Learning | Analytics
 theme: jekyll-theme-minimal
+
+show_downloads: false
+
+github:
+  is_project_page: true
