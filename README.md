@@ -4,7 +4,7 @@
 
 Customer retention is a critical challenge across many industries, particularly telecommunications where acquiring a new customer is generally more expensive than retaining an existing one.
 
-This project uses machine learning techniques to identify customers who are likely to leave a telecommunications provider ("churn"). The objective was to build and evaluate predictive models capable of identifying at-risk customers and to understand which customer characteristics are most strongly associated with churn behaviour.
+This project uses machine learning techniques to identify customers who are likely to leave a telecommunications provider (churn). The objective was to build and evaluate predictive models capable of identifying at-risk customers and to understand which customer characteristics are most strongly associated with churn behaviour.
 
 ---
 
@@ -18,8 +18,8 @@ The aim of this project was to answer the following question:
 
 A successful model could be used to:
 
-- Target retention campaigns
-- Improve customer lifetime value
+- Target specific customers for retention campaigns
+- Improve retention
 - Reduce marketing expenditure
 - Support data-driven decision making
 
@@ -53,7 +53,7 @@ Examples include:
 
 ---
 
-## Technology Stack
+## Technology Stack Used
 
 - Python
 - Pandas
@@ -84,6 +84,7 @@ df["TotalCharges"] = pd.to_numeric(
     errors="coerce"
 )
 ```
+Blank values were treated as '0' and replaced as such.
 
 ### Categorical Encoding
 
@@ -123,12 +124,7 @@ A correlation matrix was produced to investigate relationships between customer 
 
 ### Correlation Matrix
 
-assets/correlation-matrix.png
-
-**Screenshot Required**
-
-Replace with:
-- Correlation heatmap generated from notebook.
+![correlation-matrix](assets/correlation-matrix.png)
 
 ---
 
@@ -146,12 +142,7 @@ Feature importance analysis was conducted using a Random Forest model.
 
 ### Feature Importance Chart
 
-assets/feature-importance.png
-
-**Screenshot Required**
-
-Replace with:
-- Top 10 Feature Importance chart.
+![feature-importance](assets/feature-importance.png)
 
 ---
 
@@ -175,19 +166,14 @@ Logistic Regression was selected as the baseline model because:
 
 | Metric | Value |
 |----------|----------|
-| Accuracy | 0.79 |
-| Precision (Churn) | 0.62 |
-| Recall (Churn) | 0.51 |
-| F1 Score (Churn) | 0.56 |
+| Accuracy | 0.82 |
+| Precision (Churn) | 0.69 |
+| Recall (Churn) | 0.60 |
+| F1 Score (Churn) | 0. |
 
 ### Logistic Regression Results
 
-assets/logistic-results.png
-
-**Screenshot Required**
-
-Replace with:
-- Classification report output.
+![Logistic-results](assets/logistic-results.png)
 
 ---
 
@@ -208,8 +194,8 @@ Random Forest was selected because:
 |----------|----------|
 | Accuracy | 0.79 |
 | Precision (Churn) | 0.66 |
-| Recall (Churn) | 0.46 |
-| F1 Score (Churn) | 0.54 |
+| Recall (Churn) | 0.47 |
+| F1 Score (Churn) | 0.55 |
 
 Although overall accuracy remained strong, recall for churn cases was relatively low.
 
@@ -217,12 +203,7 @@ This suggested the model was struggling to identify customers who were actually 
 
 ### Random Forest Results
 
-assets/random-forest-results.png
-
-**Screenshot Required**
-
-Replace with:
-- Classification report output.
+![random-forest-results](assets/random-forest-results.png)
 
 ---
 
@@ -327,34 +308,19 @@ While overall accuracy reduced slightly, this trade-off significantly increased 
 
 ## Confusion Matrix
 
-assets/confusion-matrix.png
-
-**Screenshot Required**
-
-Replace with:
-- Final confusion matrix generated from notebook.
+![final confusion matrix](assets/confusion-matrix-final.png)
 
 ---
 
 ## Normalised Confusion Matrix
 
-assets/normalised-confusion-matrix.png
-
-**Screenshot Required**
-
-Replace with:
-- Row-normalised confusion matrix.
+![normalised matrix](assets/normalised-confusion-matrix.png)
 
 ---
 
 ## ROC Curve
 
-assets/roc-curve.png
-
-**Screenshot Required**
-
-Replace with:
-- ROC curve from final model.
+![ROC](assets/roc-curve.png)
 
 ---
 
@@ -364,11 +330,9 @@ The final model prioritised identifying customers likely to churn.
 
 From an operational perspective:
 
-✅ More at-risk customers were detected
-
-✅ Greater opportunity for intervention
-
-✅ Improved usefulness for a retention campaign
+- More at-risk customers were detected
+- Greater opportunity for intervention
+- Improved usefulness for a retention campaign
 
 Although this increased false positives, the cost of contacting a customer unnecessarily is generally lower than losing a customer entirely.
 
@@ -390,25 +354,6 @@ This project demonstrated:
 Most importantly, it demonstrated that the most accurate model is not always the most useful model.
 
 Selecting evaluation metrics aligned to the business objective is often more important than maximising overall accuracy.
-
----
-
-# Repository Contents
-
-```text
-assets/
-│
-├── correlation-matrix.png
-├── feature-importance.png
-├── logistic-results.png
-├── random-forest-results.png
-├── confusion-matrix.png
-├── normalised-confusion-matrix.png
-├── roc-curve.png
-│
-README.md
-Customer_Churn_Analysis.ipynb
-```
 
 ---
 
